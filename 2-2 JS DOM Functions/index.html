@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">   
+</head>
+<body>
+    <h1 id="title">This works!</h1>
+     <script>
+        const title = document.getElementById("title");
+        title.innerHTML = "Hi Soyeong!";
+//         title.style.color = 'yellow';
+//        console.log(title);        
+//         
+//         
+//         function handle(){
+//             alert("i want to resize that!");
+//         }       
+//         
+//         window.addEventListener("resize", handle);
+         
+         function handleClick(){
+             title.style.color='black';        
+         }
+         title.addEventListener("click",handleClick);    
+    </script>
+</body>
+</html>

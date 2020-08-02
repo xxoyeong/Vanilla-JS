@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #ecf0f1;
+        }
+
+        h1 {
+            color: #34495e;
+            transition: color 0.5s ease-in-out;
+        }
+        .clicked{
+            color: #7f8c8d;
+        }
+    </style>
+</head>
+<body>
+<h1 id="title">This works!</h1>
+<script>
+    const title = document.querySelector("#title");
+    const CLICKED_CLASS = 'clicked';
+    function handleClick() {
+        const currentClass = title.className;
+        if(currentClass !== CLICKED_CLASS){
+            title.className = CLICKED_CLASS;
+            console.log(currentClass);
+        }else{
+            title.className="";
+            console.log(currentClass);
+        }
+
+    }
+
+    function init() {
+    title.addEventListener('click',handleClick);
+    }
+    init();
+</script>
+</body>
+</html>
